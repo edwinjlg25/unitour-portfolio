@@ -22,6 +22,8 @@
   const premiumQuotes = document.querySelector('[data-premium-quotes]');
   const premiumStars = document.querySelector('[data-premium-stars]');
 
+  let isSubmittingContactForm = false;
+
   const setAriaExpanded = (element, isExpanded) => {
     if (!element) return;
     element.setAttribute('aria-expanded', String(isExpanded));
@@ -127,8 +129,24 @@
     if (!contactForm) return;
     if (!formNote) return;
 
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const defaultSubmitLabel = submitButton ? submitButton.textContent : '';
+
+    const setSubmitState = (state) => {
+      if (!submitButton) return;
+      const label = state === 'sending' ? 'Enviando…' : defaultSubmitLabel;
+      submitButton.textContent = label;
+      const shouldDisable = state === 'sending';
+      submitButton.disabled = shouldDisable;
+      submitButton.setAttribute('aria-disabled', String(shouldDisable));
+    };
+
+    const wait = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
+
     contactForm.addEventListener('submit', (event) => {
       event.preventDefault();
+
+      if (isSubmittingContactForm) return;
 
       const formData = new FormData(contactForm);
       const email = String(formData.get('email') || '').trim();
@@ -144,8 +162,22 @@
         return;
       }
 
-      contactForm.reset();
-      formNote.textContent = 'Mensaje listo. Reemplaza este mock por tu endpoint backend cuando lo necesites.';
+      isSubmittingContactForm = true;
+      setSubmitState('sending');
+      formNote.textContent = 'Enviando mensaje…';
+
+      wait(900)
+        .then(() => {
+          contactForm.reset();
+          formNote.textContent = 'Mensaje enviado. ¡Gracias! Te responderemos pronto.';
+        })
+        .catch(() => {
+          formNote.textContent = 'Ocurrió un error al enviar. Inténtalo de nuevo.';
+        })
+        .finally(() => {
+          isSubmittingContactForm = false;
+          setSubmitState('idle');
+        });
     });
   };
 
