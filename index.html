@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Unitour es una plataforma 3D interactiva que ayuda a las universidades a mostrar su campus y su oferta académica mediante recorridos virtuales inmersivos." />
+    <title>Unitour | Recorridos Universitarios 3D Interactivos</title>
+
+    <link rel="icon" href="./assets/img/unitour-logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./assets/img/unitour-logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Inicio de Unitour">
+          <img class="brand-logo" src="./assets/img/unitour-logo.png" alt="Unitour" width="36" height="36" />
+          <span class="brand-name">UNITOUR</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal" data-nav>
+          <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-nav-toggle>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+          </button>
+
+          <ul class="nav-list" data-nav-list>
+            <li class="nav-item dropdown" data-dropdown>
+              <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" data-dropdown-toggle>
+                Producto
+                <span class="chevron" aria-hidden="true"></span>
+              </button>
+              <div class="dropdown-panel" data-dropdown-panel>
+                <a class="dropdown-link" href="#platform">Resumen de la plataforma</a>
+                <a class="dropdown-link" href="#capabilities">Capacidades</a>
+                <a class="dropdown-link" href="#tech">Tecnología</a>
+                <a class="dropdown-link" href="#pricing">Planes y precios</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown" data-dropdown>
+              <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" data-dropdown-toggle>
+                Soporte
+                <span class="chevron" aria-hidden="true"></span>
+              </button>
+              <div class="dropdown-panel" data-dropdown-panel>
+                <a class="dropdown-link" href="#process">Implementación</a>
+                <a class="dropdown-link" href="#faq">Preguntas frecuentes</a>
+                <a class="dropdown-link" href="#contact">Contacto</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">UNITOUR</p>
+            <h1 class="hero-title">Da a conocer tu institución con un recorrido virtual interactivo</h1>
+            <p class="hero-subtitle">
+              Unitour combina renderizado en tiempo real, modelado 3D y datos académicos modulares para crear una
+              experiencia inmersiva que permite a las instituciones comunicar su oferta con claridad.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Solicitar una demo</a>
+              <a class="button button-ghost" href="#platform">Explorar la plataforma</a>
+            </div>
+
+            <dl class="hero-metrics" aria-label="Aspectos clave">
+              <div class="metric">
+                <dt class="metric-label">Motor</dt>
+                <dd class="metric-value">Unreal Engine 5</dd>
+              </div>
+              <div class="metric">
+                <dt class="metric-label">Flujo 3D</dt>
+                <dd class="metric-value">Assets en Blender</dd>
+              </div>
+              <div class="metric">
+                <dt class="metric-label">Datos académicos</dt>
+                <dd class="metric-value">JSON o base de datos</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-visual" aria-label="Visual principal de Unitour">
+            <div class="visual-card visual-card-main">
+              <img
+                class="visual-image"
+                src="./assets/img/unefa-mitad-3d.png"
+                alt="Fotografía del campus combinada con un plano 3D"
+                loading="eager"
+              />
+              <div class="visual-overlay" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="split" aria-label="De la realidad a la simulación">
+        <div class="container split-inner">
+          <div class="split-card">
+            <img class="split-image" src="./assets/img/unefa.JPG" alt="Fachada de la universidad usada como referencia" loading="lazy" />
+            <div class="split-caption">
+              <h2 class="split-title">Captura el campus</h2>
+              <p class="split-text">Partimos de referencias confiables y un levantamiento inicial para representar cada espacio con precisión.</p>
+            </div>
+          </div>
+
+          <div class="split-arrow" aria-hidden="true"></div>
+
+          <div class="split-card">
+            <img class="split-image" src="./assets/img/unefa-modelo-3d.png" alt="Representación 3D del campus" loading="lazy" />
+            <div class="split-caption">
+              <h2 class="split-title">Entrega un modelo interactivo</h2>
+              <p class="split-text">Los estudiantes exploran carreras, semestres y espacios dentro de un entorno 3D responsivo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="platform">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title">Una plataforma modular para cualquier institución</h2>
+            <p class="section-lead">
+              Unitour 3D está construida como un sistema escalable que se adapta a distintos campus, estructuras académicas
+              y lineamientos de marca.
+            </p>
+          </header>
+
+          <div class="cards">
+            <article class="card">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-compass"></i></div>
+              <h3 class="card-title">Navegación inmersiva</h3>
+              <p class="card-text">Modos guiado y libre con orientación clara y elementos informativos contextuales.</p>
+            </article>
+            <article class="card">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-mortarboard"></i></div>
+              <h3 class="card-title">Capas de información académica</h3>
+              <p class="card-text">Carreras, semestres y materias disponibles bajo demanda mediante paneles integrados.</p>
+            </article>
+            <article class="card">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-database"></i></div>
+              <h3 class="card-title">Actualizaciones basadas en datos</h3>
+              <p class="card-text">Conecta JSON o una base de datos para mantener consistencia entre sedes y departamentos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="capabilities">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title">Capacidades</h2>
+            <p class="section-lead">Una entrega sólida requiere diseño consistente, rendimiento y mantenibilidad.</p>
+          </header>
+
+          <div class="feature-grid">
+            <div class="feature">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-lightning-charge"></i></div>
+              <h3 class="feature-title">Renderizado en tiempo real</h3>
+              <p class="feature-text">Visuales de alta calidad con iluminación, materiales y rendimiento optimizados.</p>
+            </div>
+            <div class="feature">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-box"></i></div>
+              <h3 class="feature-title">Pipeline de assets 3D</h3>
+              <p class="feature-text">Flujo Blender a Unreal con escala consistente, nomenclatura clara y control de versiones.</p>
+            </div>
+            <div class="feature">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-bounding-box"></i></div>
+              <h3 class="feature-title">Interfaz interactiva en 3D</h3>
+              <p class="feature-text">Paneles integrados, puntos de interés y recorridos guiados diseñados para claridad y usabilidad.</p>
+            </div>
+            <div class="feature">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-layers"></i></div>
+              <h3 class="feature-title">Módulos escalables</h3>
+              <p class="feature-text">Bloques reutilizables para incorporar nuevas facultades o sedes con rapidez.</p>
+            </div>
+            <div class="feature">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-rocket"></i></div>
+              <h3 class="feature-title">Preparación para despliegue</h3>
+              <p class="feature-text">Planificación de hardware, guía de instalación y evaluación de viabilidad técnica.</p>
+            </div>
+            <div class="feature">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-palette"></i></div>
+              <h3 class="feature-title">Presentación alineada a la marca</h3>
+              <p class="feature-text">Identidad visual, tono y estructura de contenido alineados con estándares institucionales.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title">Proceso de implementación</h2>
+            <p class="section-lead">Un flujo de entrega predecible que equilibra calidad, costos y viabilidad técnica.</p>
+          </header>
+
+          <ol class="timeline">
+            <li class="timeline-step">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-search"></i></div>
+              <h3 class="timeline-title">Descubrimiento y requerimientos</h3>
+              <p class="timeline-text">Definimos alcance del campus, contenidos, dispositivos objetivo y criterios de éxito.</p>
+            </li>
+            <li class="timeline-step">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-tools"></i></div>
+              <h3 class="timeline-title">Modelado 3D y optimización</h3>
+              <p class="timeline-text">Creamos assets en Blender, definimos materiales y controlamos presupuestos de rendimiento.</p>
+            </li>
+            <li class="timeline-step">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-cpu"></i></div>
+              <h3 class="timeline-title">Integración en Unreal</h3>
+              <p class="timeline-text">Armamos la experiencia en UE5 con interacción, interfaz y contenido basado en datos.</p>
+            </li>
+            <li class="timeline-step">
+              <div class="icon-badge" aria-hidden="true"><i class="bi bi-shield-check"></i></div>
+              <h3 class="timeline-title">QA y planificación de despliegue</h3>
+              <p class="timeline-text">Validamos navegación, exactitud de datos y requerimientos de hardware e instalación.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="tech">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title">Stack tecnológico</h2>
+            <p class="section-lead">Herramientas elegidas por fidelidad visual, modularidad y mantenibilidad a largo plazo.</p>
+          </header>
+
+          <div class="stack">
+            <div class="stack-item">
+              <h3 class="stack-title">Unreal Engine 5</h3>
+              <p class="stack-text">Renderizado en tiempo real, sistemas de interacción y composición escalable de escenas.</p>
+            </div>
+            <div class="stack-item">
+              <h3 class="stack-title">Blender</h3>
+              <p class="stack-text">Flujo de modelado, UVs y exportación optimizada para ejecución en tiempo real.</p>
+            </div>
+            <div class="stack-item">
+              <h3 class="stack-title">JSON / Base de datos</h3>
+              <p class="stack-text">Estructuras académicas en un esquema consistente para carga dinámica.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title">Planes y precios</h2>
+            <p class="section-lead">
+              Unitour 3D se puede implementar como un MVP (mínima inversión) o escalar a una plataforma completa con datos,
+              reseñas y despliegue. Estos planes están basados en el alcance técnico del prototipo.
+            </p>
+          </header>
+
+          <div class="pricing-grid" aria-label="Planes de compra">
+            <article class="pricing-card" aria-label="Plan Lite">
+              <div class="pricing-top">
+                <div class="pricing-badge">Lite</div>
+                <h3 class="pricing-title">MVP (mínima inversión)</h3>
+                <p class="pricing-price">Desde $500</p>
+                <p class="pricing-note">Ideal para iniciar con lo esencial y validar el producto.</p>
+              </div>
+              <ul class="pricing-features" aria-label="Incluye">
+                <li>Modelado 3D simple del campus (sin interiores detallados)</li>
+                <li>Recorrido virtual básico en Unreal Engine 5</li>
+                <li>Panel de carreras disponibles (catálogo inicial)</li>
+                <li>Funcionamiento en modo local (sin servidor)</li>
+              </ul>
+              <a class="button button-primary pricing-cta" href="#contact">Comprar Lite</a>
+            </article>
+
+            <article class="pricing-card" aria-label="Plan Pro">
+              <div class="pricing-top">
+                <div class="pricing-badge pricing-badge-pro">Pro</div>
+                <h3 class="pricing-title">Datos académicos (JSON / BD)</h3>
+                <p class="pricing-price">Desde $900</p>
+                <p class="pricing-note">Para universidades que necesitan información completa y actualizable.</p>
+              </div>
+              <ul class="pricing-features" aria-label="Incluye">
+                <li>Todo lo de Lite</li>
+                <li>Carreras, semestres y materias con detalle</li>
+                <li>Información de pensum por carrera</li>
+                <li>Carga dinámica desde JSON o base de datos</li>
+              </ul>
+              <a class="button button-primary pricing-cta" href="#contact">Comprar Pro</a>
+            </article>
+
+            <article class="pricing-card pricing-card-premium" aria-label="Plan Premium">
+              <div class="pricing-top">
+                <div class="pricing-badge pricing-badge-premium">Premium</div>
+                <h3 class="pricing-title">Plataforma completa (alta inversión)</h3>
+                <p class="pricing-price">$3500–$7000</p>
+                <p class="pricing-note">Escalable, multiedificio, con reseñas y despliegue opcional.</p>
+              </div>
+              <ul class="pricing-features" aria-label="Incluye">
+                <li>Todo lo de Pro</li>
+                <li>Red interactiva de opiniones por carrera/semestre/materia</li>
+                <li>Puntuaciones con estrellas y comentarios</li>
+                <li>Servidor remoto opcional para reseñas online</li>
+                <li>Testing, instalación y capacitación</li>
+              </ul>
+
+              <a class="button button-primary pricing-cta" href="#contact">Comprar Premium</a>
+            </article>
+          </div>
+
+          <div class="pricing-footnote" aria-label="Nota de costos">
+            <p class="pricing-footnote-text">
+              Los montos pueden variar según alcance del campus, cantidad de edificios, nivel de detalle, hardware objetivo y si se requiere
+              servidor para reseñas. Calendario típico estimado: 3–6 meses.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <p class="section-lead">Respuestas claras para evaluar viabilidad e inversión.</p>
+          </header>
+
+          <div class="accordion" data-accordion>
+            <details class="accordion-item">
+              <summary class="accordion-summary">¿La plataforma se adapta a cualquier universidad?</summary>
+              <div class="accordion-panel">
+                <p>
+                  Sí. Unitour está diseñada como un sistema modular. El entorno, la navegación y las capas de datos académicos
+                  están estructurados para que cada institución aplique su propio modelo del campus y su catálogo.
+                </p>
+              </div>
+            </details>
+            <details class="accordion-item">
+              <summary class="accordion-summary">¿Cómo se gestiona la información académica?</summary>
+              <div class="accordion-panel">
+                <p>
+                  El contenido se carga desde JSON o desde una base de datos según las necesidades operativas. Esto mantiene carreras,
+                  semestres y materias consistentes y más fáciles de actualizar.
+                </p>
+              </div>
+            </details>
+            <details class="accordion-item">
+              <summary class="accordion-summary">¿Qué incluye una evaluación de viabilidad técnica?</summary>
+              <div class="accordion-panel">
+                <p>
+                  Revisamos materiales, equipos, mano de obra, localización, restricciones de instalación y costos estimados
+                  para respaldar decisiones de inversión.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title">Contacta a Unitour</h2>
+            <p class="section-lead">Cuéntanos sobre tu campus y te propondremos un plan de recorrido a medida.</p>
+          </header>
+
+          <div class="contact-grid">
+            <form class="form" data-contact-form>
+              <div class="field">
+                <label class="label" for="fullName">Nombre completo</label>
+                <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label class="label" for="email">Correo electrónico</label>
+                <input class="input" id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label class="label" for="institution">Institución</label>
+                <input class="input" id="institution" name="institution" type="text" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label class="label" for="message">Mensaje</label>
+                <textarea class="textarea" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button class="button button-primary" type="submit">Enviar mensaje</button>
+              <p class="form-note" data-form-note aria-live="polite"></p>
+            </form>
+
+            <aside class="contact-aside">
+              <div class="contact-card">
+                <h3 class="contact-title">Consultas comerciales</h3>
+                <p class="contact-text">Respondemos en 1 día hábil.</p>
+                <a class="contact-link" href="mailto:hello@unitour.example">hello@unitour.example</a>
+              </div>
+              <div class="contact-card">
+                <h3 class="contact-title">Ubicación</h3>
+                <p class="contact-text">Equipo remoto con soporte para Latinoamérica.</p>
+              </div>
+              <div class="contact-card">
+                <h3 class="contact-title">Descargas</h3>
+                <p class="contact-text">Solicita una ficha técnica y un desglose de costos.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">UNITOUR</div>
+          <p class="footer-text">Recorridos 3D interactivos diseñados para instituciones académicas.</p>
+        </div>
+        <div class="footer-links" aria-label="Enlaces del pie">
+          <a class="footer-link" href="#platform">Plataforma</a>
+          <a class="footer-link" href="#process">Proceso</a>
+          <a class="footer-link" href="#contact">Contacto</a>
+        </div>
+        <div class="footer-meta">
+          <p class="footer-text">© <span data-year></span> Unitour. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js" defer></script>
+  </body>
+</html>
